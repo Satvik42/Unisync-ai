@@ -37,5 +37,68 @@ UniSync is built using a modern **MERN (MongoDB, Express, React, Node.js)** stac
 - **Environment**: The solution assumes a `.env` file is configured with a valid `MONGODB_URI` and `GEMINI_API_KEY`.
 - **Admin Integrity**: The AI evaluation assumes that test cases provided by admins are logically correct for the problem statement.
 
+## 💻 Tech Stack
+- **Frontend**: React 18, Vite, Axios, Lucide Icons, Vanilla CSS (Glassmorphism).
+- **Backend**: Node.js, Express.js.
+- **Database**: MongoDB Atlas (Mongoose ODM).
+- **Security**: BCryptJS (Hashing), JSON Web Tokens (JWT).
+- **AI Engine**: Google Gemini 3.1 Flash-Lite (via @google/genai).
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- A MongoDB Atlas account/cluster
+- A Google AI (Gemini) API Key
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Satvik42/Unisync-ai.git
+cd Unisync-ai
+```
+
+### 2. Backend Setup
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the `backend` folder:
+   ```env
+   PORT=5005
+   MONGODB_URI=your_mongodb_connection_string
+   GEMINI_API_KEY=your_gemini_api_key
+   JWT_SECRET=your_secret_string
+   ```
+4. **Seed Demo Accounts** (Required for the first run):
+   ```bash
+   node seedUsers.js
+   ```
+5. Start the server:
+   ```bash
+   node server.js
+   ```
+
+### 3. Frontend Setup
+1. Open a new terminal and navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+### 4. Access the Application
+- **Frontend**: Open `http://localhost:5173`
+- **Backend API**: `http://localhost:5005/api`
+
 ---
 Developed as a high-fidelity solution for student innovation and university technical management.
